@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,18 +18,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
+                                <rect key="frame" x="102.66666666666669" y="347.66666666666669" width="209" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
+                                <rect key="frame" x="99.666666666666686" y="396.66666666666669" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="357"/>
+            <point key="canvasLocation" x="750" y="360"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -60,8 +60,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gHZ-UI-bou" kind="relationship" relationship="viewControllers" id="lLi-Gi-zBY"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="3Qg-s0-aW1"/>
+                        <segue destination="o2J-wg-aYS" kind="relationship" relationship="viewControllers" id="wZc-E9-uEA"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="Fjb-8P-p79"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -69,18 +69,51 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
         <!--First-->
-        <scene sceneID="h9t-Fc-kNz">
+        <scene sceneID="5Qs-Za-HPs">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="gHZ-UI-bou" userLabel="First" customClass="FirstViewController" customModule="c895" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Player" image="first" id="PDy-wa-kb6" userLabel="First"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="o2J-wg-aYS" customClass="FirstViewController" customModule="c895" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="PME-Gt-x5P"/>
+                    <connections>
+                        <outlet property="playerView" destination="EZe-uG-ymF" id="Wju-tl-NRK"/>
+                    </connections>
                 </avPlayerViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bZU-S6-Ull" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbg-e7-kEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="EZe-uG-ymF">
+                    <rect key="frame" x="0.0" y="0.0" width="429" height="306"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itv-ry-POo">
+                            <rect key="frame" x="177" y="256" width="75" height="30"/>
+                            <state key="normal" title="Play/Pause"/>
+                            <connections>
+                                <action selector="playPauseButton:" destination="o2J-wg-aYS" eventType="touchUpInside" id="b9m-Zo-j7I"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="96r-P1-gdJ">
+                            <rect key="frame" x="15" y="47" width="398" height="212"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="398" id="LMQ-KH-PZs"/>
+                                <constraint firstAttribute="height" constant="212" id="rhD-ij-Ocr"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Itv-ry-POo" firstAttribute="centerX" secondItem="EZe-uG-ymF" secondAttribute="centerX" id="EuV-h4-S5F"/>
+                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerX" secondItem="EZe-uG-ymF" secondAttribute="centerX" id="SPi-NM-Nq4"/>
+                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerY" secondItem="EZe-uG-ymF" secondAttribute="centerY" id="Yqg-6I-OQe"/>
+                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerY" secondItem="EZe-uG-ymF" secondAttribute="centerY" id="eIb-0e-egv"/>
+                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerX" secondItem="EZe-uG-ymF" secondAttribute="centerX" id="jf1-6a-TDh"/>
+                        <constraint firstAttribute="bottom" secondItem="Itv-ry-POo" secondAttribute="bottom" constant="20" id="vui-yP-XJC"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="777" y="-355"/>
+            <point key="canvasLocation" x="732" y="-310"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="logo2.png" width="2292" height="1667"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

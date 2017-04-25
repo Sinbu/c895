@@ -14,6 +14,8 @@
 		4D032F661EAEC2C50010386E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D032F651EAEC2C50010386E /* Assets.xcassets */; };
 		4D032F691EAEC2C50010386E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D032F671EAEC2C50010386E /* LaunchScreen.storyboard */; };
 		4D032F721EAEC3590010386E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D032F711EAEC3590010386E /* AVFoundation.framework */; };
+		4D9E4F1F1EAED63D006481AD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E4F1E1EAED63D006481AD /* logo.png */; };
+		4D9E4F211EAF0177006481AD /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E4F201EAF0177006481AD /* logo2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4D032F681EAEC2C50010386E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D032F6A1EAEC2C50010386E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D032F711EAEC3590010386E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4D9E4F1E1EAED63D006481AD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4D9E4F201EAF0177006481AD /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				4D032F651EAEC2C50010386E /* Assets.xcassets */,
 				4D032F671EAEC2C50010386E /* LaunchScreen.storyboard */,
 				4D032F6A1EAEC2C50010386E /* Info.plist */,
+				4D9E4F1E1EAED63D006481AD /* logo.png */,
+				4D9E4F201EAF0177006481AD /* logo2.png */,
 			);
 			path = c895;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9E4F1F1EAED63D006481AD /* logo.png in Resources */,
+				4D9E4F211EAF0177006481AD /* logo2.png in Resources */,
 				4D032F691EAEC2C50010386E /* LaunchScreen.storyboard in Resources */,
 				4D032F661EAEC2C50010386E /* Assets.xcassets in Resources */,
 				4D032F641EAEC2C50010386E /* Main.storyboard in Resources */,
@@ -320,6 +328,7 @@
 				4D032F6F1EAEC2C50010386E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
