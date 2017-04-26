@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,14 +89,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-lE-3q1">
-                                <rect key="frame" x="170" y="622" width="75" height="30"/>
+                                <rect key="frame" x="169.66666666666666" y="622" width="75" height="30"/>
                                 <state key="normal" title="Pause/Play"/>
                                 <connections>
                                     <action selector="playPauseButton:" destination="iAz-t8-cxq" eventType="touchUpInside" id="HrY-MR-vvg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
-                                <rect key="frame" x="207.33333333333334" y="109" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
+                                <rect key="frame" x="38" y="109" width="338" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -103,6 +104,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GsA-mI-vU0" firstAttribute="leading" secondItem="bnY-Yc-4KJ" secondAttribute="leadingMargin" constant="18" id="2iI-Cq-Rkk"/>
                             <constraint firstItem="DoT-lE-3q1" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="YE1-Fs-oZF"/>
                             <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" id="djf-Dw-SOH"/>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="top" secondItem="qvA-6N-DJY" secondAttribute="bottom" constant="45" id="gzp-To-ggk"/>

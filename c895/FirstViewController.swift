@@ -65,8 +65,8 @@ class FirstViewController: UIViewController {
         let convertedMetaTitle = String(data: origMetaTitle, encoding: String.Encoding.utf8)!
         self.artistAndSongName.text = convertedMetaTitle
         let titleArr = convertedMetaTitle.components(separatedBy: "-")
-        self.artistName = titleArr[0]
-        self.songName = titleArr[1]
+        self.artistName = titleArr[0].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        self.songName = titleArr[1].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         self.updateNowPlayingInfoCenter()
     }
     
