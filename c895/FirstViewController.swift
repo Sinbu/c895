@@ -54,6 +54,7 @@ class FirstViewController: UIViewController {
         commandCenter.pauseCommand.addTarget(handler: { (event) in    // Begin playing the current track
             self.player.pause()
             return MPRemoteCommandHandlerStatus.success})
+        
         commandCenter.togglePlayPauseCommand.addTarget(handler: { (event) in    // Toggle current track
             self.playPauseButton(nil)
             return MPRemoteCommandHandlerStatus.success})
