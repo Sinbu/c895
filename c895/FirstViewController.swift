@@ -11,7 +11,7 @@ import AVKit
 import AVFoundation
 import MediaPlayer
 
-class FirstViewController: UIViewController, AVAudioSessionDelegate {
+class FirstViewController: UIViewController {
     
     @IBOutlet var artistAndSongName:UILabel!
     
@@ -96,19 +96,6 @@ class FirstViewController: UIViewController, AVAudioSessionDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: Delegate Functions
-    func beginInterruption() {
-        // TODO: Implement
-    }
-    
-    func endInterruption() {
-        // TODO: Implement
-    }
-    
-    func inputIsAvailableChanged(_ isInputAvailable: Bool) {
-        // TODO: Implement
     }
     
     // MARK: Helper Functions
