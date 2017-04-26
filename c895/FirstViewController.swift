@@ -11,7 +11,7 @@ import AVKit
 import AVFoundation
 import MediaPlayer
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, AVAudioSessionDelegate {
     
     @IBOutlet var artistAndSongName:UILabel!
     
@@ -25,6 +25,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("View did load")
         self.player = AVPlayer(playerItem: playerItem)
         self.player.play()
         
@@ -75,18 +76,21 @@ class FirstViewController: UIViewController {
     }
     
     deinit {
+        print("Deinit")
         playerItem.removeObserver(self, forKeyPath: "timedMetadata")
+        UIApplication.shared.endReceivingRemoteControlEvents()
     }
     
     override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
+        print("view did appear")
         UIApplication.shared.beginReceivingRemoteControlEvents()
         
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        UIApplication.shared.endReceivingRemoteControlEvents()
+        print("view did disappear")
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,12 +98,21 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Delegate Functions
+    func beginInterruption() {
+        // TODO: Implement
+    }
+    
+    func endInterruption() {
+        // TODO: Implement
+    }
+    
+    func inputIsAvailableChanged(_ isInputAvailable: Bool) {
+        // TODO: Implement
+    }
     
     // MARK: Helper Functions
     private func updateNowPlayingInfoCenter() {
-        
-        
-        
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyTitle: self.songName ?? "Unknown Song",
             MPMediaItemPropertyArtist: self.artistName ?? "Unknown Artist",
