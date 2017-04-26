@@ -60,55 +60,84 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="o2J-wg-aYS" kind="relationship" relationship="viewControllers" id="wZc-E9-uEA"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="Fjb-8P-p79"/>
+                        <segue destination="RIP-a2-0wr" kind="relationship" relationship="viewControllers" id="9Ir-Yi-flA"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="cGW-H1-s4Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--First-->
-        <scene sceneID="5Qs-Za-HPs">
+        <!--First View Controller-->
+        <scene sceneID="s5A-zU-QoI">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="o2J-wg-aYS" customClass="FirstViewController" customModule="c895" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="PME-Gt-x5P"/>
+                <viewController id="iAz-t8-cxq" customClass="FirstViewController" customModule="c895" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qvA-6N-DJY"/>
+                        <viewControllerLayoutGuide type="bottom" id="p6M-np-cTl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bnY-Yc-4KJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-A5-IfG">
+                                <rect key="frame" x="67" y="266" width="280" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="MRb-l5-lql"/>
+                                    <constraint firstAttribute="height" constant="204" id="qLl-sR-G6j"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-lE-3q1">
+                                <rect key="frame" x="170" y="622" width="75" height="30"/>
+                                <state key="normal" title="Pause/Play"/>
+                                <connections>
+                                    <action selector="playPauseButton:" destination="iAz-t8-cxq" eventType="touchUpInside" id="HrY-MR-vvg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
+                                <rect key="frame" x="207.33333333333334" y="109" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DoT-lE-3q1" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="YE1-Fs-oZF"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" id="djf-Dw-SOH"/>
+                            <constraint firstItem="GsA-mI-vU0" firstAttribute="top" secondItem="qvA-6N-DJY" secondAttribute="bottom" constant="45" id="gzp-To-ggk"/>
+                            <constraint firstItem="p6M-np-cTl" firstAttribute="top" secondItem="DoT-lE-3q1" secondAttribute="bottom" constant="35" id="hz9-ik-cRK"/>
+                            <constraint firstItem="GsA-mI-vU0" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="nSm-sx-sHa"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="vuW-ov-gQO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aXf-Fr-cMI"/>
                     <connections>
-                        <outlet property="playerView" destination="EZe-uG-ymF" id="Wju-tl-NRK"/>
+                        <outlet property="artistAndSongName" destination="GsA-mI-vU0" id="MHO-8l-oL1"/>
                     </connections>
-                </avPlayerViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbg-e7-kEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="EZe-uG-ymF">
-                    <rect key="frame" x="0.0" y="0.0" width="429" height="306"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itv-ry-POo">
-                            <rect key="frame" x="177" y="256" width="75" height="30"/>
-                            <state key="normal" title="Play/Pause"/>
-                            <connections>
-                                <action selector="playPauseButton:" destination="o2J-wg-aYS" eventType="touchUpInside" id="b9m-Zo-j7I"/>
-                            </connections>
-                        </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="96r-P1-gdJ">
-                            <rect key="frame" x="15" y="47" width="398" height="212"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="398" id="LMQ-KH-PZs"/>
-                                <constraint firstAttribute="height" constant="212" id="rhD-ij-Ocr"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="Itv-ry-POo" firstAttribute="centerX" secondItem="EZe-uG-ymF" secondAttribute="centerX" id="EuV-h4-S5F"/>
-                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerX" secondItem="EZe-uG-ymF" secondAttribute="centerX" id="SPi-NM-Nq4"/>
-                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerY" secondItem="EZe-uG-ymF" secondAttribute="centerY" id="Yqg-6I-OQe"/>
-                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerY" secondItem="EZe-uG-ymF" secondAttribute="centerY" id="eIb-0e-egv"/>
-                        <constraint firstItem="96r-P1-gdJ" firstAttribute="centerX" secondItem="EZe-uG-ymF" secondAttribute="centerX" id="jf1-6a-TDh"/>
-                        <constraint firstAttribute="bottom" secondItem="Itv-ry-POo" secondAttribute="bottom" constant="20" id="vui-yP-XJC"/>
-                    </constraints>
-                </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgD-Jx-M31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="-310"/>
+            <point key="canvasLocation" x="1655.072463768116" y="-329.34782608695656"/>
+        </scene>
+        <!--Radio-->
+        <scene sceneID="SJb-0J-bI8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RIP-a2-0wr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Radio" image="first" id="801-x2-M7O"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="83e-uv-cML">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iAz-t8-cxq" kind="relationship" relationship="rootViewController" id="eci-jA-Dbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzO-wm-677" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="-329.34782608695656"/>
         </scene>
     </scenes>
     <resources>
