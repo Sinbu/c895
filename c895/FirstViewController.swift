@@ -20,14 +20,12 @@ class FirstViewController: UIViewController {
     var artistName:String?
     var logoImage:UIImage = UIImage(named: "logo2.png")!
     
-    var player:AVPlayer = AVPlayer()
-    var playerItem = AVPlayerItem(url: URL(string: "http://www.c895.org/streams/c895sc128.pls")!)
+    var player:AVPlayer? = AVPlayer()
+    var playerItem:AVPlayerItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View did load")
-        
-        self.player = AVPlayer(playerItem: playerItem)
         self.playRadio()
         
         // MARK: Notifications
@@ -39,9 +37,6 @@ class FirstViewController: UIViewController {
                                                object: AVAudioSession.sharedInstance())
         
         NotificationCenter.default.addObserver(self, selector: #selector(stalledPlayback), name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: playerItem)
-        
-        // Get artist/song name
-        playerItem.addObserver(self, forKeyPath: "timedMetadata", options: [], context: nil)
         
         // Enable Audio session
         do {
@@ -77,7 +72,7 @@ class FirstViewController: UIViewController {
                                 of object: Any?,
                                 change: [NSKeyValueChangeKey : Any]?,
                                 context: UnsafeMutableRawPointer?) {        // Get medatata, making sure to support a wider range of characters
-        if let origMetaTitle = (playerItem.timedMetadata?.first?.stringValue?.data(using: String.Encoding.isoLatin1, allowLossyConversion: true)) {
+        if let origMetaTitle = (playerItem?.timedMetadata?.first?.stringValue?.data(using: String.Encoding.isoLatin1, allowLossyConversion: true)) {
             let convertedMetaTitle = String(data: origMetaTitle, encoding: String.Encoding.utf8)!
             self.artistAndSongName.text = convertedMetaTitle
             let titleArr = convertedMetaTitle.components(separatedBy: "-")
@@ -98,14 +93,12 @@ class FirstViewController: UIViewController {
                                                   name: Notification.Name.AVPlayerItemPlaybackStalled,
                                                   object: self.playerItem)
         
-        playerItem.removeObserver(self, forKeyPath: "timedMetadata")
-        UIApplication.shared.endReceivingRemoteControlEvents()
+        playerItem?.removeObserver(self, forKeyPath: "timedMetadata")
     }
     
     override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
-        UIApplication.shared.beginReceivingRemoteControlEvents()
         
     }
     
@@ -168,11 +161,20 @@ class FirstViewController: UIViewController {
     }
     
     func playRadio() {
+        self.playerItem = AVPlayerItem(url: URL(string: "http://www.c895.org/streams/c895sc128.pls")!)
+        self.player = AVPlayer(playerItem: self.playerItem)
         
-        self.player.play()
+        // Get artist/song name
+        playerItem?.addObserver(self, forKeyPath: "timedMetadata", options: [], context: nil)
+        
+        self.player?.play()
     }
     func pauseRadio() {
-        self.player.pause()
+        self.player?.pause()
+        playerItem?.removeObserver(self, forKeyPath: "timedMetadata")
+        self.player = nil
+        self.playerItem = nil
+        
     }
     
     // MARK: IBActions
