@@ -21,13 +21,24 @@ class FirstViewController: UIViewController {
     var logoImage:UIImage = UIImage(named: "logo2.png")!
     
     var player:AVPlayer = AVPlayer()
-    let playerItem = AVPlayerItem(url: URL(string: "http://www.c895.org/streams/c895sc128.pls")!)
+    var playerItem = AVPlayerItem(url: URL(string: "http://www.c895.org/streams/c895sc128.pls")!)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View did load")
+        
         self.player = AVPlayer(playerItem: playerItem)
-        self.player.play()
+        self.playRadio()
+        
+        // MARK: Notifications
+        
+        // Notification for AVAudioSession Interruption (e.g. Phone call)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(sessionInterrupted),
+                                               name: Notification.Name.AVAudioSessionInterruption,
+                                               object: AVAudioSession.sharedInstance())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(stalledPlayback), name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: playerItem)
         
         // Get artist/song name
         playerItem.addObserver(self, forKeyPath: "timedMetadata", options: [], context: nil)
@@ -49,11 +60,11 @@ class FirstViewController: UIViewController {
         // Enable Control Center
         let commandCenter = MPRemoteCommandCenter.shared()
         commandCenter.playCommand.addTarget(handler: { (event) in    // Begin playing the current track
-            self.player.play()
+            self.playRadio()
             return MPRemoteCommandHandlerStatus.success})
         
         commandCenter.pauseCommand.addTarget(handler: { (event) in    // Begin playing the current track
-            self.player.pause()
+            self.pauseRadio()
             return MPRemoteCommandHandlerStatus.success})
         
         commandCenter.togglePlayPauseCommand.addTarget(handler: { (event) in    // Toggle current track
@@ -63,20 +74,30 @@ class FirstViewController: UIViewController {
     }
     
     override func observeValue(forKeyPath keyPath: String?,
-                               of object: Any?,
-                               change: [NSKeyValueChangeKey : Any]?,
-                               context: UnsafeMutableRawPointer?) {        // Get medatata, making sure to support a wider range of characters
-        let origMetaTitle = (playerItem.timedMetadata?.first?.stringValue?.data(using: String.Encoding.isoLatin1, allowLossyConversion: true))!
-        let convertedMetaTitle = String(data: origMetaTitle, encoding: String.Encoding.utf8)!
-        self.artistAndSongName.text = convertedMetaTitle
-        let titleArr = convertedMetaTitle.components(separatedBy: "-")
-        self.artistName = titleArr[0].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        self.songName = titleArr[1].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        self.updateNowPlayingInfoCenter()
+                                of object: Any?,
+                                change: [NSKeyValueChangeKey : Any]?,
+                                context: UnsafeMutableRawPointer?) {        // Get medatata, making sure to support a wider range of characters
+        if let origMetaTitle = (playerItem.timedMetadata?.first?.stringValue?.data(using: String.Encoding.isoLatin1, allowLossyConversion: true)) {
+            let convertedMetaTitle = String(data: origMetaTitle, encoding: String.Encoding.utf8)!
+            self.artistAndSongName.text = convertedMetaTitle
+            let titleArr = convertedMetaTitle.components(separatedBy: "-")
+            self.artistName = titleArr[0].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            self.songName = titleArr[1].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            self.updateNowPlayingInfoCenter()
+            self.setupUserActivity()
+        }
     }
     
     deinit {
         print("Deinit")
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name.AVAudioSessionInterruption,
+                                                  object: AVAudioSession.sharedInstance())
+        
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name.AVPlayerItemPlaybackStalled,
+                                                  object: self.playerItem)
+        
         playerItem.removeObserver(self, forKeyPath: "timedMetadata")
         UIApplication.shared.endReceivingRemoteControlEvents()
     }
@@ -107,9 +128,56 @@ class FirstViewController: UIViewController {
         ]
     }
     
+    func setupUserActivity() {
+        let activity = NSUserActivity(activityType: NSUserActivityTypeBrowsingWeb)
+        userActivity = activity
+        let url = "https://www.google.com/search?q=\(self.artistName ?? "")+\(self.songName ?? "")"
+        let urlStr = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let searchURL : URL = URL(string: urlStr!)!
+        activity.webpageURL = searchURL
+        userActivity?.becomeCurrent()
+    }
+    
+    func stalledPlayback(notification:NSNotification) {
+        print("Playback stalled")
+        print(notification)
+    }
+    
+    func sessionInterrupted(notification: NSNotification) {
+        guard let userInfo = notification.userInfo,
+            let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+            let type = AVAudioSessionInterruptionType(rawValue: typeValue) else {
+                return
+        }
+        if type == .began {
+            // Interruption began, take appropriate actions
+            print("Session Interruption began")
+        }
+        else if type == .ended {
+            if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
+                let options = AVAudioSessionInterruptionOptions(rawValue: optionsValue)
+                if options == .shouldResume {
+                    // Interruption Ended - playback should resume
+                    print("Session Interruption ended - Resume playback")
+                } else {
+                    // Interruption Ended - playback should NOT resume
+                    print("Session Interruption ended - Do not resume playback")
+                }
+            }
+        }
+    }
+    
+    func playRadio() {
+        
+        self.player.play()
+    }
+    func pauseRadio() {
+        self.player.pause()
+    }
+    
     // MARK: IBActions
     @IBAction func playPauseButton(_ sender: UIButton?) {
-        isPlaying ? self.player.pause() : self.player.play()
+        isPlaying ? self.pauseRadio() : self.playRadio()
         isPlaying = !isPlaying
     }
 }
