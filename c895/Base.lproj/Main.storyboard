@@ -81,36 +81,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-A5-IfG">
-                                <rect key="frame" x="67" y="266" width="280" height="204"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="MRb-l5-lql"/>
-                                    <constraint firstAttribute="height" constant="204" id="qLl-sR-G6j"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-lE-3q1">
-                                <rect key="frame" x="170" y="622" width="75" height="30"/>
-                                <state key="normal" title="Pause/Play"/>
-                                <connections>
-                                    <action selector="playPauseButton:" destination="iAz-t8-cxq" eventType="touchUpInside" id="HrY-MR-vvg"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Artist and Song Name..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
                                 <rect key="frame" x="38" y="109" width="338" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-A5-IfG">
+                                <rect key="frame" x="70" y="231" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="MRb-l5-lql"/>
+                                    <constraint firstAttribute="height" constant="275" id="qLl-sR-G6j"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="leading" secondItem="bnY-Yc-4KJ" secondAttribute="leadingMargin" constant="18" id="2iI-Cq-Rkk"/>
-                            <constraint firstItem="p6M-np-cTl" firstAttribute="top" secondItem="DoT-lE-3q1" secondAttribute="bottom" constant="35" id="DKv-ks-48P"/>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="top" secondItem="qvA-6N-DJY" secondAttribute="bottom" constant="45" id="Q44-e3-W9H"/>
-                            <constraint firstItem="DoT-lE-3q1" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="YE1-Fs-oZF"/>
-                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" id="djf-Dw-SOH"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" constant="0.5" id="djf-Dw-SOH"/>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="nSm-sx-sHa"/>
-                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="vuW-ov-gQO"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" constant="0.5" id="vuW-ov-gQO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aXf-Fr-cMI"/>
@@ -143,8 +134,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="C89.5 Logo With Slogan.jpg" width="512" height="512"/>
         <image name="first" width="30" height="30"/>
-        <image name="logo2.png" width="2292" height="1667"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

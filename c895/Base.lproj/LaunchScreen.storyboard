@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kub-pi-TU5">
-                                <rect key="frame" x="47.5" y="231.5" width="280" height="204"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kub-pi-TU5">
+                                <rect key="frame" x="50" y="196" width="275" height="275"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="DY4-Pf-sRw"/>
-                                    <constraint firstAttribute="height" constant="204" id="M7r-iB-sxu"/>
+                                    <constraint firstAttribute="width" constant="275" id="DY4-Pf-sRw"/>
+                                    <constraint firstAttribute="height" constant="275" id="M7r-iB-sxu"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -38,10 +38,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo2.png" width="2292" height="1667"/>
+        <image name="C89.5 Logo With Slogan.jpg" width="512" height="512"/>
     </resources>
 </document>

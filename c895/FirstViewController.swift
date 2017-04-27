@@ -15,7 +15,6 @@ class FirstViewController: UIViewController {
     
     @IBOutlet var artistAndSongName:UILabel!
     
-    var isPlaying:Bool = true;
     var songName:String?
     var artistName:String?
     var logoImage:UIImage = UIImage(named: "logo2.png")!
@@ -179,8 +178,7 @@ class FirstViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func playPauseButton(_ sender: UIButton?) {
-        isPlaying ? self.pauseRadio() : self.playRadio()
-        isPlaying = !isPlaying
+        self.player == nil ? playRadio() : pauseRadio()
     }
 }
 
