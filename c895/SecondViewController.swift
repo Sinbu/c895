@@ -27,9 +27,9 @@ class SecondViewController: UIViewController {
 
     func somethingTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let label = tapGestureRecognizer.view as! UILabel
-        let phoneNumber = "2064218989"
+        let phoneNumber = "206-421-8989"
         if (label == self.callButton) {
-            if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            if let phoneCallURL = URL(string: "tel:\(phoneNumber)") {
                 
                 let application:UIApplication = UIApplication.shared
                 if (application.canOpenURL(phoneCallURL)) {

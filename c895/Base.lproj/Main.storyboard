@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,17 +30,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Si5-1b-Fg6">
-                                <rect key="frame" x="62.333333333333343" y="545.66666666666652" width="289.33333333333337" height="112.33333333333337"/>
+                                <rect key="frame" x="62.333333333333343" y="546" width="289.33333333333337" height="133"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Si5-1b-Fg6" secondAttribute="height" multiplier="286:111" id="CU2-gj-3Co"/>
+                                    <constraint firstAttribute="width" secondItem="Si5-1b-Fg6" secondAttribute="height" multiplier="286:111" constant="-53.621621621621614" id="CU2-gj-3Co"/>
                                 </constraints>
-                                <mutableString key="text">C89.5 has been Seattle’s Home for Dance for over 45 years, playing all the best new dance music, remixes, and specialty shows. This non-profit station is owned by Seattle Public Schools and operated by professional staff with assistance from students of Nathan Hale High School as part of the electronic media course. Students gain practical experience in production, programming, on-air presentation, and music selection. Some programs are hosted by alumni and community volunteers. Through their website, C895.org, they reach a large and diverse audience from all over the world and are recognized as a leader in worldwide dance music. C89.5 also puts on super fun dance events throughout the year, including live DJ sets, laser shows, and boat dance parties.</mutableString>
+                                <string key="text">C89.5 has been Seattle’s Home for Dance for over 45 years, playing all the best new dance music, remixes, and specialty shows. This non-profit station is owned by Seattle Public Schools and operated by professional staff with assistance from students of Nathan Hale High School as part of the electronic media course. Students gain practical experience in production, programming, on-air presentation, and music selection. Some programs are hosted by alumni and community volunteers. Through their website, C895.org, they reach a large and diverse audience from all over the world and are recognized as a leader in worldwide dance music. C89.5 also puts on super fun dance events throughout the year, including live DJ sets, laser shows, and boat dance parties.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to call: (206) 421-8989" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="d6N-JW-BR7">
-                                <rect key="frame" x="82.666666666666686" y="305.66666666666669" width="248.66666666666663" height="124.66666666666663"/>
+                                <rect key="frame" x="82.666666666666686" y="305.66666666666669" width="248.66666666666663" height="125"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="1.1" constant="-166" id="KEx-tS-E1U"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.7" id="WPX-6A-6Wk"/>
                             <constraint firstItem="d6N-JW-BR7" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="dNR-F8-ekh"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Si5-1b-Fg6" secondAttribute="bottom" constant="29" id="mcc-y6-6I3"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Si5-1b-Fg6" secondAttribute="bottom" constant="8" id="mcc-y6-6I3"/>
                             <constraint firstItem="d6N-JW-BR7" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="pxK-Zo-8pg"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="su2-GQ-ZAX"/>
                             <constraint firstItem="d6N-JW-BR7" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.6" id="uld-M7-hht"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1656.4453125" y="359.29721815519764"/>
+            <point key="canvasLocation" x="1655.625" y="358.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -105,8 +105,8 @@
                                     <constraint firstAttribute="width" secondItem="IS4-A5-IfG" secondAttribute="height" multiplier="1:1" id="fB4-ay-aag"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Artist and Song Name...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
-                                <rect key="frame" x="14" y="115.66666666666669" width="386" height="63.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Artist and Song Name...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
+                                <rect key="frame" x="14" y="115.66666666666666" width="386" height="63.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GsA-mI-vU0" secondAttribute="height" multiplier="249:41" id="VIm-L1-Pou"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-AW-DDL">
-                                <rect key="frame" x="165.66666666666666" y="565.66666666666663" width="83" height="83"/>
+                                <rect key="frame" x="165.66666666666666" y="566" width="82.666666666666686" height="82.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F6E-AW-DDL" secondAttribute="height" multiplier="1:1" id="Q4q-dJ-ixJ"/>
                                 </constraints>

@@ -168,6 +168,10 @@ class FirstViewController: UIViewController {
                 if options == .shouldResume {
                     // Interruption Ended - playback should resume
                     print("Session Interruption ended - Resume playback")
+                    playerItem?.removeObserver(self, forKeyPath: "timedMetadata")
+                    self.player = nil
+                    self.playerItem = nil
+                    self.playRadio()
                 } else {
                     // Interruption Ended - playback should NOT resume
                     print("Session Interruption ended - Do not resume playback")
