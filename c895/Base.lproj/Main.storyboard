@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,18 +20,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="279" y="491" width="210" height="42"/>
+                                <rect key="frame" x="407" y="662" width="210" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="277" y="541" width="215" height="17"/>
+                                <rect key="frame" x="405" y="712" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,39 +78,43 @@
                         <viewControllerLayoutGuide type="bottom" id="p6M-np-cTl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bnY-Yc-4KJ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Artist and Song Name..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
-                                <rect key="frame" x="38" y="109" width="692" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-A5-IfG">
+                                <rect key="frame" x="256" y="427" width="512" height="512"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IS4-A5-IfG" secondAttribute="height" multiplier="1:1" id="fB4-ay-aag"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Artist and Song Name...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
+                                <rect key="frame" x="153.5" y="214" width="717" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GsA-mI-vU0" secondAttribute="height" multiplier="249:41" id="VIm-L1-Pou"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-A5-IfG">
-                                <rect key="frame" x="247" y="375" width="275" height="275"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="MRb-l5-lql"/>
-                                    <constraint firstAttribute="height" constant="275" id="qLl-sR-G6j"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-AW-DDL">
-                                <rect key="frame" x="334" y="836" width="100" height="100"/>
+                                <rect key="frame" x="435" y="1050" width="154" height="154"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="vPn-8v-JXY"/>
-                                    <constraint firstAttribute="height" constant="100" id="wEd-of-Pht"/>
+                                    <constraint firstAttribute="width" secondItem="F6E-AW-DDL" secondAttribute="height" multiplier="1:1" id="Q4q-dJ-ixJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GsA-mI-vU0" firstAttribute="leading" secondItem="bnY-Yc-4KJ" secondAttribute="leadingMargin" constant="18" id="2iI-Cq-Rkk"/>
-                            <constraint firstItem="GsA-mI-vU0" firstAttribute="top" secondItem="qvA-6N-DJY" secondAttribute="bottom" constant="45" id="Q44-e3-W9H"/>
-                            <constraint firstItem="p6M-np-cTl" firstAttribute="top" secondItem="F6E-AW-DDL" secondAttribute="bottom" constant="39" id="V67-m7-pny"/>
-                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" constant="0.5" id="djf-Dw-SOH"/>
-                            <constraint firstItem="F6E-AW-DDL" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="nBL-eL-edH"/>
-                            <constraint firstItem="GsA-mI-vU0" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="nSm-sx-sHa"/>
-                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" constant="0.5" id="vuW-ov-gQO"/>
+                            <constraint firstItem="F6E-AW-DDL" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="20o-8e-AqO"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="5aJ-Vx-DMJ"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="width" secondItem="bnY-Yc-4KJ" secondAttribute="height" multiplier="256:683" id="98W-JI-A1I"/>
+                            <constraint firstItem="GsA-mI-vU0" firstAttribute="centerY" secondItem="IS4-A5-IfG" secondAttribute="centerY" multiplier="0.4" id="9fw-bH-TJF"/>
+                            <constraint firstItem="F6E-AW-DDL" firstAttribute="centerY" secondItem="IS4-A5-IfG" secondAttribute="centerY" multiplier="1.65" id="CI5-gs-Qz8"/>
+                            <constraint firstItem="F6E-AW-DDL" firstAttribute="centerX" secondItem="GsA-mI-vU0" secondAttribute="centerX" id="PLg-D0-wAN"/>
+                            <constraint firstItem="GsA-mI-vU0" firstAttribute="width" secondItem="IS4-A5-IfG" secondAttribute="width" multiplier="1.4" id="WJi-62-zTu"/>
+                            <constraint firstItem="F6E-AW-DDL" firstAttribute="width" secondItem="IS4-A5-IfG" secondAttribute="width" multiplier="0.3" id="diT-ac-Ufk"/>
+                            <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" id="sFO-pe-wbA"/>
+                            <constraint firstItem="GsA-mI-vU0" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="y2E-r1-utz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="C89.5 - Seattle's Home for Dance" id="aXf-Fr-cMI"/>
@@ -120,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgD-Jx-M31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655.072463768116" y="-329.34782608695656"/>
+            <point key="canvasLocation" x="1653.515625" y="-330.30746705710101"/>
         </scene>
         <!--C89.5-->
         <scene sceneID="SJb-0J-bI8">
