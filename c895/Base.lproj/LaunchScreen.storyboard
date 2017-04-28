@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,21 +19,21 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zkh-tV-4CE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kub-pi-TU5">
-                                <rect key="frame" x="50" y="196" width="275" height="275"/>
+                                <rect key="frame" x="256" y="427" width="512" height="512"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="DY4-Pf-sRw"/>
-                                    <constraint firstAttribute="height" constant="275" id="M7r-iB-sxu"/>
+                                    <constraint firstAttribute="width" secondItem="kub-pi-TU5" secondAttribute="height" multiplier="1:1" id="Ry3-QU-00X"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kub-pi-TU5" firstAttribute="centerX" secondItem="zkh-tV-4CE" secondAttribute="centerX" id="Ypt-ch-YPE"/>
-                            <constraint firstItem="kub-pi-TU5" firstAttribute="centerY" secondItem="zkh-tV-4CE" secondAttribute="centerY" id="lOA-zw-PRo"/>
+                            <constraint firstItem="kub-pi-TU5" firstAttribute="centerY" secondItem="zkh-tV-4CE" secondAttribute="centerY" id="4HB-5S-3vY"/>
+                            <constraint firstItem="kub-pi-TU5" firstAttribute="centerX" secondItem="zkh-tV-4CE" secondAttribute="centerX" id="Yec-S5-4JK"/>
+                            <constraint firstItem="kub-pi-TU5" firstAttribute="width" secondItem="zkh-tV-4CE" secondAttribute="height" multiplier="256:683" id="fZD-nI-SLL"/>
                         </constraints>
                     </view>
                 </viewController>
