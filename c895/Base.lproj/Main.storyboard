@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,14 +62,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="RIP-a2-0wr" kind="relationship" relationship="viewControllers" id="9Ir-Yi-flA"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="cGW-H1-s4Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--First View Controller-->
+        <!--C89.5 - Seattle's Home for Dance-->
         <scene sceneID="s5A-zU-QoI">
             <objects>
                 <viewController id="iAz-t8-cxq" customClass="FirstViewController" customModule="c895" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,29 +93,39 @@
                                     <constraint firstAttribute="height" constant="275" id="qLl-sR-G6j"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-AW-DDL">
+                                <rect key="frame" x="157" y="548" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="vPn-8v-JXY"/>
+                                    <constraint firstAttribute="height" constant="100" id="wEd-of-Pht"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="leading" secondItem="bnY-Yc-4KJ" secondAttribute="leadingMargin" constant="18" id="2iI-Cq-Rkk"/>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="top" secondItem="qvA-6N-DJY" secondAttribute="bottom" constant="45" id="Q44-e3-W9H"/>
+                            <constraint firstItem="p6M-np-cTl" firstAttribute="top" secondItem="F6E-AW-DDL" secondAttribute="bottom" constant="39" id="V67-m7-pny"/>
                             <constraint firstItem="IS4-A5-IfG" firstAttribute="centerY" secondItem="bnY-Yc-4KJ" secondAttribute="centerY" constant="0.5" id="djf-Dw-SOH"/>
+                            <constraint firstItem="F6E-AW-DDL" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="nBL-eL-edH"/>
                             <constraint firstItem="GsA-mI-vU0" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" id="nSm-sx-sHa"/>
                             <constraint firstItem="IS4-A5-IfG" firstAttribute="centerX" secondItem="bnY-Yc-4KJ" secondAttribute="centerX" constant="0.5" id="vuW-ov-gQO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aXf-Fr-cMI"/>
+                    <navigationItem key="navigationItem" title="C89.5 - Seattle's Home for Dance" id="aXf-Fr-cMI"/>
                     <connections>
                         <outlet property="artistAndSongName" destination="GsA-mI-vU0" id="MHO-8l-oL1"/>
+                        <outlet property="playButtonImageView" destination="F6E-AW-DDL" id="riT-XT-Zhk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgD-Jx-M31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1655.072463768116" y="-329.34782608695656"/>
         </scene>
-        <!--Radio-->
+        <!--C89.5-->
         <scene sceneID="SJb-0J-bI8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RIP-a2-0wr" sceneMemberID="viewController">
+                <navigationController title="C89.5" automaticallyAdjustsScrollViewInsets="NO" id="RIP-a2-0wr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Radio" image="first" id="801-x2-M7O"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="83e-uv-cML">
@@ -135,6 +144,7 @@
     </scenes>
     <resources>
         <image name="C89.5 Logo With Slogan.jpg" width="512" height="512"/>
+        <image name="Play Button.png" width="2011" height="2049"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

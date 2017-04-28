@@ -14,10 +14,14 @@ import MediaPlayer
 class FirstViewController: UIViewController {
     
     @IBOutlet var artistAndSongName:UILabel!
+    @IBOutlet var playButtonImageView:UIImageView!
     
     var songName:String?
     var artistName:String?
-    var logoImage:UIImage = UIImage(named: "logo2.png")!
+    let logoImage:UIImage = UIImage(named: "C89.5 Logo With Slogan.jpg")!
+    
+    let playButtonImage:UIImage = UIImage(named: "Play Button.png")!
+    let pauseButtonImage:UIImage = UIImage(named: "Pause Button.png")!
     
     var player:AVPlayer? = AVPlayer()
     var playerItem:AVPlayerItem?
@@ -26,6 +30,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         print("View did load")
         self.playRadio()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        playButtonImageView.isUserInteractionEnabled = true
+        playButtonImageView.addGestureRecognizer(tapGestureRecognizer)
         
         // MARK: Notifications
         
@@ -62,7 +70,7 @@ class FirstViewController: UIViewController {
             return MPRemoteCommandHandlerStatus.success})
         
         commandCenter.togglePlayPauseCommand.addTarget(handler: { (event) in    // Toggle current track
-            self.playPauseButton(nil)
+            self.playPauseButton()
             return MPRemoteCommandHandlerStatus.success})
         
     }
@@ -112,6 +120,13 @@ class FirstViewController: UIViewController {
     }
     
     // MARK: Helper Functions
+    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        if (tappedImage == self.playButtonImageView) {
+            self.playPauseButton()
+        }
+    
+    }
     private func updateNowPlayingInfoCenter() {
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyTitle: self.songName ?? "Unknown Song",
@@ -160,6 +175,7 @@ class FirstViewController: UIViewController {
     }
     
     func playRadio() {
+        self.playButtonImageView.image = self.pauseButtonImage
         self.playerItem = AVPlayerItem(url: URL(string: "http://www.c895.org/streams/c895sc128.pls")!)
         self.player = AVPlayer(playerItem: self.playerItem)
         
@@ -169,6 +185,7 @@ class FirstViewController: UIViewController {
         self.player?.play()
     }
     func pauseRadio() {
+        self.playButtonImageView.image = self.playButtonImage
         self.player?.pause()
         playerItem?.removeObserver(self, forKeyPath: "timedMetadata")
         self.player = nil
@@ -177,7 +194,7 @@ class FirstViewController: UIViewController {
     }
     
     // MARK: IBActions
-    @IBAction func playPauseButton(_ sender: UIButton?) {
+    @IBAction func playPauseButton() {
         self.player == nil ? playRadio() : pauseRadio()
     }
 }
