@@ -130,10 +130,13 @@ class FirstViewController: UIViewController {
     
     }
     private func updateNowPlayingInfoCenter() {
+        let artwork = MPMediaItemArtwork.init(boundsSize: self.logoImage.size, requestHandler: { (size) -> UIImage in
+            return self.logoImage
+        })
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyTitle: self.songName ?? "Unknown Song",
             MPMediaItemPropertyArtist: self.artistName ?? "Unknown Artist",
-            MPMediaItemPropertyArtwork: MPMediaItemArtwork(image: self.logoImage)
+            MPMediaItemPropertyArtwork: artwork
         ]
     }
     
