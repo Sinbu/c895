@@ -106,6 +106,8 @@ class FirstViewController: UIViewController {
     override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
+        // Make sure play button is updated
+        self.updatePlayButtonStatus()
         
     }
     
@@ -171,6 +173,14 @@ class FirstViewController: UIViewController {
                     print("Session Interruption ended - Do not resume playback")
                 }
             }
+        }
+    }
+    
+    func updatePlayButtonStatus() {
+        if (self.player != nil) {
+            self.playButtonImageView.image = self.pauseButtonImage
+        } else {
+            self.playButtonImageView.image = self.playButtonImage
         }
     }
     
