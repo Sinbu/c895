@@ -152,7 +152,9 @@ class FirstViewController: UIViewController {
     
     func stalledPlayback(notification:NSNotification) {
         print("Playback stalled")
-        print(notification)
+        self.pauseRadio()
+        self.playRadio()
+        
     }
     
     func sessionInterrupted(notification: NSNotification) {
