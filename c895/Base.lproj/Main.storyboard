@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,16 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call or text C89.5 now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-o0-dgi">
-                                <rect key="frame" x="62" y="109.99999999999999" width="290" height="62.666666666666643"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Si5-1b-Fg6">
-                                <rect key="frame" x="62.333333333333343" y="546" width="289.33333333333337" height="133"/>
+                                <rect key="frame" x="20" y="513" width="374" height="166"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Si5-1b-Fg6" secondAttribute="height" multiplier="286:111" constant="-53.621621621621614" id="CU2-gj-3Co"/>
+                                    <constraint firstAttribute="height" constant="166" id="3gF-lh-C13"/>
                                 </constraints>
                                 <string key="text">C89.5 has been Seattle’s Home for Dance for over 45 years, playing all the best new dance music, remixes, and specialty shows. This non-profit station is owned by Seattle Public Schools and operated by professional staff with assistance from students of Nathan Hale High School as part of the electronic media course. Students gain practical experience in production, programming, on-air presentation, and music selection. Some programs are hosted by alumni and community volunteers. Through their website, C895.org, they reach a large and diverse audience from all over the world and are recognized as a leader in worldwide dance music. C89.5 also puts on super fun dance events throughout the year, including live DJ sets, laser shows, and boat dance parties.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
@@ -45,18 +39,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call or text C89.5 now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-o0-dgi">
+                                <rect key="frame" x="62" y="64" width="290" height="62.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5CG-5a-GhH"/>
-                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="1.1" constant="-166" id="KEx-tS-E1U"/>
-                            <constraint firstItem="dEE-o0-dgi" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.7" id="WPX-6A-6Wk"/>
-                            <constraint firstItem="d6N-JW-BR7" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="dNR-F8-ekh"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Si5-1b-Fg6" secondAttribute="bottom" constant="8" id="mcc-y6-6I3"/>
-                            <constraint firstItem="d6N-JW-BR7" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="pxK-Zo-8pg"/>
-                            <constraint firstItem="dEE-o0-dgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="su2-GQ-ZAX"/>
-                            <constraint firstItem="d6N-JW-BR7" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.6" id="uld-M7-hht"/>
-                            <constraint firstItem="dEE-o0-dgi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="46" id="vag-4G-N14"/>
+                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="187:368" id="70k-U5-JeS"/>
+                            <constraint firstItem="dEE-o0-dgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="AbC-j6-iwz"/>
+                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="BxC-z1-xgi"/>
+                            <constraint firstItem="d6N-JW-BR7" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="NVk-LZ-twb"/>
+                            <constraint firstItem="dEE-o0-dgi" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="145:368" id="OtI-P7-Gm2"/>
+                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" constant="-8" id="kOu-6l-TyF"/>
+                            <constraint firstItem="dEE-o0-dgi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="u8x-A1-Yru"/>
+                            <constraint firstItem="d6N-JW-BR7" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="31:92" id="xD2-vD-oaR"/>
+                            <constraint firstItem="d6N-JW-BR7" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="xKS-8f-zr4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="LHg-1b-bf8"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655.625" y="358.75"/>
+            <point key="canvasLocation" x="1655.072463768116" y="358.69565217391306"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
