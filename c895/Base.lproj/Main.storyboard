@@ -33,36 +33,41 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to call: (206) 421-8989" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="d6N-JW-BR7">
-                                <rect key="frame" x="82.666666666666686" y="305.66666666666669" width="248.66666666666663" height="125"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call or text C89.5 now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-o0-dgi">
                                 <rect key="frame" x="62" y="64" width="290" height="62.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTc-TO-faI">
+                                <rect key="frame" x="67" y="319.66666666666669" width="280" height="97"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <state key="normal" title="(206) 421-8989"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.minimumScaleFactor">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="phoneButtonPressedWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Ohd-Lq-ZdD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="vTc-TO-faI" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.380435" id="6x0-mL-wVv"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="187:368" id="70k-U5-JeS"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="AbC-j6-iwz"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="BxC-z1-xgi"/>
-                            <constraint firstItem="d6N-JW-BR7" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="NVk-LZ-twb"/>
+                            <constraint firstItem="vTc-TO-faI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Fpo-cf-6F2"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="145:368" id="OtI-P7-Gm2"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" constant="-8" id="kOu-6l-TyF"/>
+                            <constraint firstItem="vTc-TO-faI" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="sMS-KT-bXl"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="u8x-A1-Yru"/>
-                            <constraint firstItem="d6N-JW-BR7" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="31:92" id="xD2-vD-oaR"/>
-                            <constraint firstItem="d6N-JW-BR7" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="xKS-8f-zr4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="LHg-1b-bf8"/>
-                    <connections>
-                        <outlet property="callButton" destination="d6N-JW-BR7" id="Ri5-jt-Lhu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-AW-DDL">
-                                <rect key="frame" x="165.66666666666666" y="566" width="82.666666666666686" height="82.666666666666629"/>
+                                <rect key="frame" x="165.66666666666666" y="566.66666666666663" width="82.666666666666686" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F6E-AW-DDL" secondAttribute="height" multiplier="1:1" id="Q4q-dJ-ixJ"/>
                                 </constraints>
@@ -176,7 +181,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="xHE-QZ-SD1"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="jM5-pz-g8z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofy-wH-Qym" userLabel="First Responder" sceneMemberID="firstResponder"/>
