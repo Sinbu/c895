@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="todayextension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                <rect key="frame" x="75.666666666666686" y="12" width="180" height="57.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="9Am-iB-kJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K4J-cJ-O8Z">
+                                <rect key="frame" x="16" y="32" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K4J-cJ-O8Z" secondAttribute="height" multiplier="1:1" id="W4b-aM-ovJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcM-Rs-ofX">
+                                <rect key="frame" x="254" y="16" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="27T-Kb-kwp"/>
+                                    <constraint firstAttribute="height" constant="50" id="A9V-Vz-NSd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="Play Button.png"/>
+                                <connections>
+                                    <action selector="playPauseRadioWithSender:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="l8v-bD-h6I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jcM-Rs-ofX" secondAttribute="trailing" id="1II-bb-uaE"/>
+                            <constraint firstItem="K4J-cJ-O8Z" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.9" constant="-270" id="34X-ML-4mf"/>
+                            <constraint firstItem="jcM-Rs-ofX" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="8Gr-34-9B5"/>
+                            <constraint firstItem="K4J-cJ-O8Z" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="An5-on-v3x"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" constant="5" id="LlK-Xc-ten"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="NLq-8e-Yne"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="K4J-cJ-O8Z" secondAttribute="leading" id="ZzL-jK-Eqk"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="height" secondItem="S3S-Oj-5AN" secondAttribute="height" multiplier="0.7" id="ljl-Lc-BrE"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="82"/>
+                    <connections>
+                        <outlet property="artistAndSongName" destination="GcN-lo-r42" id="ZCE-zv-tVg"/>
+                        <outlet property="playPauseButton" destination="jcM-Rs-ofX" id="I03-jq-aT8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="36.684782608695656"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="C89.5 Logo With Slogan.jpg" width="512" height="512"/>
+        <image name="Play Button.png" width="2011" height="2049"/>
+    </resources>
+</document>

@@ -26,6 +26,8 @@ class FirstViewController: UIViewController {
     var player:AVPlayer? = AVPlayer()
     var playerItem:AVPlayerItem?
     
+    let sharedDefaults = UserDefaults.init(suiteName: "group.Snigsoft.c895.ShareExtension")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View did load")
@@ -87,6 +89,10 @@ class FirstViewController: UIViewController {
             self.songName = titleArr[1].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             self.updateNowPlayingInfoCenter()
             self.setupUserActivity()
+            
+            // Widget
+            sharedDefaults?.set(convertedMetaTitle, forKey: "artistAndSongName")
+            sharedDefaults?.synchronize()
         }
     }
     
@@ -195,6 +201,11 @@ class FirstViewController: UIViewController {
     
     func playRadio() {
         self.playButtonImageView.image = self.pauseButtonImage
+        
+        // Widget
+        sharedDefaults?.set(false, forKey: "playButtonShowing")
+        sharedDefaults?.synchronize()
+        
         self.playerItem = AVPlayerItem(url: URL(string: "http://www.c895.org/streams/c895sc128.pls")!)
         self.player = AVPlayer(playerItem: self.playerItem)
         
@@ -205,6 +216,11 @@ class FirstViewController: UIViewController {
     }
     func pauseRadio() {
         self.playButtonImageView.image = self.playButtonImage
+        
+        // Widget
+        sharedDefaults?.set(true, forKey: "playButtonShowing")
+        sharedDefaults?.synchronize()
+        
         self.player?.pause()
         playerItem?.removeObserver(self, forKeyPath: "timedMetadata")
         self.player = nil
