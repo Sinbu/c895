@@ -33,7 +33,7 @@ class FirstViewController: UIViewController {
         print("View did load")
         self.playRadio()
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: .imageTapped)
         playButtonImageView.isUserInteractionEnabled = true
         playButtonImageView.addGestureRecognizer(tapGestureRecognizer)
         
@@ -41,11 +41,11 @@ class FirstViewController: UIViewController {
         
         // Notification for AVAudioSession Interruption (e.g. Phone call)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(sessionInterrupted),
+                                               selector: .sessionInterrupted,
                                                name: Notification.Name.AVAudioSessionInterruption,
                                                object: AVAudioSession.sharedInstance())
         
-        NotificationCenter.default.addObserver(self, selector: #selector(stalledPlayback), name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: playerItem)
+        NotificationCenter.default.addObserver(self, selector: .stalledPlayback, name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: playerItem)
         
         // Enable Audio session
         do {
@@ -232,5 +232,16 @@ class FirstViewController: UIViewController {
     @IBAction func playPauseButton() {
         self.player == nil ? playRadio() : pauseRadio()
     }
+}
+
+// MARK: Super unnecessary selector sugar
+// Make selector syntax more strongly typed
+fileprivate extension Selector {
+    static let imageTapped =
+        #selector(FirstViewController.imageTapped(tapGestureRecognizer:))
+    static let stalledPlayback =
+        #selector(FirstViewController.stalledPlayback)
+    static let sessionInterrupted =
+        #selector(FirstViewController.sessionInterrupted(notification:))
 }
 
