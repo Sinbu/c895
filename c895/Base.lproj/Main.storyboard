@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Si5-1b-Fg6">
-                                <rect key="frame" x="-18.666666666666657" y="555" width="412.33333333333326" height="166"/>
+                                <rect key="frame" x="16" y="555" width="343" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="3gF-lh-C13"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vTc-TO-faI" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.380435" id="6x0-mL-wVv"/>
-                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="187:368" id="70k-U5-JeS"/>
+                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="187:368" constant="-69.619565217391312" id="70k-U5-JeS"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="AbC-j6-iwz"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="BxC-z1-xgi"/>
                             <constraint firstItem="vTc-TO-faI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Fpo-cf-6F2"/>
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655.072463768116" y="358.69565217391306"/>
+            <point key="canvasLocation" x="1653.5999999999999" y="358.37438423645324"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-AW-DDL">
-                                <rect key="frame" x="142.66666666666666" y="607.66666666666663" width="90.666666666666657" height="90.666666666666629"/>
+                                <rect key="frame" x="142" y="607.33333333333337" width="92" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F6E-AW-DDL" secondAttribute="height" multiplier="1:1" id="Q4q-dJ-ixJ"/>
                                 </constraints>
