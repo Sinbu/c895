@@ -122,7 +122,7 @@ class FirstViewController: UIViewController {
     }
     
     // MARK: Helper Functions
-    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         if (tappedImage == self.playButtonImageView) {
             self.playPauseButton()
@@ -150,14 +150,14 @@ class FirstViewController: UIViewController {
         userActivity?.becomeCurrent()
     }
     
-    func stalledPlayback(notification:NSNotification) {
+    @objc func stalledPlayback(notification:NSNotification) {
         print("Playback stalled")
         self.pauseRadio()
         self.playRadio()
         
     }
     
-    func sessionInterrupted(notification: NSNotification) {
+    @objc func sessionInterrupted(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
             let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
             let type = AVAudioSessionInterruptionType(rawValue: typeValue) else {
