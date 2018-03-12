@@ -26,6 +26,9 @@ class FirstViewController: UIViewController {
     var player:AVPlayer? = AVPlayer()
     var playerItem:AVPlayerItem?
     
+    // New observation KVO properties
+    var timedMetadata: NSKeyValueObservation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View did load")
@@ -73,22 +76,27 @@ class FirstViewController: UIViewController {
             self.playPauseButton()
             return MPRemoteCommandHandlerStatus.success})
         
+        // New Observation code
+        if let playerItem = self.playerItem {
+            self.timedMetadata = playerItem.observe(\.timedMetadata, changeHandler: { (player, change) in
+                print("Metadata updated")
+                if let origMetaTitle = (player.timedMetadata?.first?.stringValue?.data(using: String.Encoding.isoLatin1, allowLossyConversion: true)) {
+                    let convertedMetaTitle = String(data: origMetaTitle, encoding: String.Encoding.utf8)!
+                    self.artistAndSongName.text = convertedMetaTitle
+                    let titleArr = convertedMetaTitle.components(separatedBy: "-")
+                    self.artistName = titleArr[0].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                    self.songName = titleArr[1].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                    self.updateNowPlayingInfoCenter()
+                    self.setupUserActivity()
+                }
+            })
+        }
+        else {
+            print("Cannot observe metadata")
+        }
+        
     }
     
-    override func observeValue(forKeyPath keyPath: String?,
-                                of object: Any?,
-                                change: [NSKeyValueChangeKey : Any]?,
-                                context: UnsafeMutableRawPointer?) {        // Get medatata, making sure to support a wider range of characters
-        if let origMetaTitle = (playerItem?.timedMetadata?.first?.stringValue?.data(using: String.Encoding.isoLatin1, allowLossyConversion: true)) {
-            let convertedMetaTitle = String(data: origMetaTitle, encoding: String.Encoding.utf8)!
-            self.artistAndSongName.text = convertedMetaTitle
-            let titleArr = convertedMetaTitle.components(separatedBy: "-")
-            self.artistName = titleArr[0].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            self.songName = titleArr[1].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-            self.updateNowPlayingInfoCenter()
-            self.setupUserActivity()
-        }
-    }
     
     deinit {
         print("Deinit")
@@ -217,4 +225,3 @@ class FirstViewController: UIViewController {
         self.player == nil ? playRadio() : pauseRadio()
     }
 }
-

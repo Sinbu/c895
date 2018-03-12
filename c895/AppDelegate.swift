@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Apptentive
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let configuration = ApptentiveConfiguration(apptentiveKey: "IOS-C895RADIO-4b0df8066a64", apptentiveSignature: "e2529b2a3ee35ab856c568220354f5fb") {
+            Apptentive.register(with: configuration)
+        }
         return true
     }
 

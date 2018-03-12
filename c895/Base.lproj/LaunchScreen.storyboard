@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kub-pi-TU5">
-                                <rect key="frame" x="256" y="427" width="512" height="512"/>
+                                <rect key="frame" x="205" y="376" width="614" height="614"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kub-pi-TU5" secondAttribute="height" multiplier="1:1" id="Ry3-QU-00X"/>
                                 </constraints>
@@ -33,7 +33,7 @@
                         <constraints>
                             <constraint firstItem="kub-pi-TU5" firstAttribute="centerY" secondItem="zkh-tV-4CE" secondAttribute="centerY" id="4HB-5S-3vY"/>
                             <constraint firstItem="kub-pi-TU5" firstAttribute="centerX" secondItem="zkh-tV-4CE" secondAttribute="centerX" id="Yec-S5-4JK"/>
-                            <constraint firstItem="kub-pi-TU5" firstAttribute="width" secondItem="zkh-tV-4CE" secondAttribute="height" multiplier="256:683" id="fZD-nI-SLL"/>
+                            <constraint firstItem="kub-pi-TU5" firstAttribute="width" secondItem="zkh-tV-4CE" secondAttribute="width" multiplier="0.6" id="lf5-kL-1dR"/>
                         </constraints>
                     </view>
                 </viewController>
