@@ -56,6 +56,9 @@
                                 <rect key="frame" x="9.3333333333333428" y="490" width="356.33333333333326" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Tap here to give feedback"/>
+                                <connections>
+                                    <action selector="feedbackButtonPressedWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="JEB-TT-QlI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

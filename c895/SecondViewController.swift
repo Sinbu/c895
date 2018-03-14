@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.\
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -24,6 +24,16 @@ class SecondViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func unreadMessageCountChanged(notification: Notification) {
+        
+    }
+    
+    @IBAction func feedbackButtonPressed(sender: UIButton) {
+        Apptentive.shared.engage(event: "Presented Message Center", from: self)
+        Apptentive.shared.presentMessageCenter(from: self)
+        
     }
 
     @IBAction func phoneButtonPressed(sender: UIButton) {
