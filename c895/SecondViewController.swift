@@ -38,7 +38,7 @@ class SecondViewController: UIViewController {
 
     @IBAction func phoneButtonPressed(sender: UIButton) {
         let phoneNumber = "206-421-8989"
-            if let phoneCallURL = URL(string: "tel:\(phoneNumber)") {
+        if let phoneCallURL = URL(string: "tel:\(phoneNumber)") {
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
                 if #available(iOS 10, *) {
