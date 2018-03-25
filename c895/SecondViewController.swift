@@ -10,15 +10,26 @@ import UIKit
 import Apptentive
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet var messageCenterButton: UIButton!
+    @IBOutlet var notificationBadgeImage: UIImageView!
+    @IBOutlet var notificationBadgeNumber: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.\
+        // Do any additional setup after loading the view, typically from a nib.
+        // NotificationCenter.default.addObserver(self, selector: #selector(self.unreadMessageCountChanged), name: Notification.Name.ApptentiveMessageCenterUnreadCountChanged, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         // Test code
-        // Apptentive.shared.engage(event: "test event", from: self)
+        Apptentive.shared.engage(event: "AboutScreenClicked", from: self)
+        // TODO: Make this acutally use notifications
+        unreadMessageCountChanged()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +37,34 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func unreadMessageCountChanged(notification: Notification) {
+    func unreadMessageCountChanged() {
+        let count = Apptentive.shared.unreadMessageCount
+        // update UI with count
+        print("Unread Message Count Changed - Count: \(count)")
+        if count > 0 {
+            notificationBadgeNumber.text = String(count)
+            notificationBadgeNumber.isHidden = false
+            notificationBadgeImage.isHidden = false
+        } else {
+            notificationBadgeNumber.isHidden = true
+            notificationBadgeImage.isHidden = true
+        }
+        
+    }
+    
+    @objc func unreadMessageCountChanged(notification: Notification) {
+        print("Unread Message Count Changed")
+        if let count = notification.userInfo?["count"] as? Int {
+            // update UI with count
+            if count > 0 {
+                notificationBadgeNumber.text = String(count)
+                notificationBadgeNumber.isHidden = false
+                notificationBadgeImage.isHidden = false
+            } else {
+                notificationBadgeNumber.isHidden = true
+                notificationBadgeImage.isHidden = true
+            }
+        }
         
     }
     

@@ -15,6 +15,7 @@
 		4D032F641EAEC2C50010386E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D032F621EAEC2C50010386E /* Main.storyboard */; };
 		4D032F661EAEC2C50010386E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D032F651EAEC2C50010386E /* Assets.xcassets */; };
 		4D032F691EAEC2C50010386E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D032F671EAEC2C50010386E /* LaunchScreen.storyboard */; };
+		4D6D3A63206723E5006E10B5 /* Notification Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6D3A62206723E5006E10B5 /* Notification Icon.png */; };
 		4DC8E5011EB30D1000AC1A8B /* Pause Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC8E4FF1EB30D1000AC1A8B /* Pause Button.png */; };
 		4DC8E5021EB30D1000AC1A8B /* Play Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC8E5001EB30D1000AC1A8B /* Play Button.png */; };
 		EF4CE44565FDA58E4D91ECC8 /* Pods_c895.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8B238B1A74B6773D799F2 /* Pods_c895.framework */; };
@@ -31,6 +32,7 @@
 		4D032F651EAEC2C50010386E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D032F681EAEC2C50010386E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D032F6A1EAEC2C50010386E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6D3A62206723E5006E10B5 /* Notification Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Notification Icon.png"; sourceTree = "<group>"; };
 		4DC8E4FF1EB30D1000AC1A8B /* Pause Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause Button.png"; sourceTree = "<group>"; };
 		4DC8E5001EB30D1000AC1A8B /* Play Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Button.png"; sourceTree = "<group>"; };
 		614C5D61AE0298873D7CDF24 /* Pods-c895.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c895.debug.xcconfig"; path = "Pods/Target Support Files/Pods-c895/Pods-c895.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				27F511A91EB2A36600116BBA /* C89.5 Logo.png */,
 				4DC8E4FF1EB30D1000AC1A8B /* Pause Button.png */,
 				4DC8E5001EB30D1000AC1A8B /* Play Button.png */,
+				4D6D3A62206723E5006E10B5 /* Notification Icon.png */,
 			);
 			path = c895;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6D3A63206723E5006E10B5 /* Notification Icon.png in Resources */,
 				4D032F691EAEC2C50010386E /* LaunchScreen.storyboard in Resources */,
 				4D032F661EAEC2C50010386E /* Assets.xcassets in Resources */,
 				4D032F641EAEC2C50010386E /* Main.storyboard in Resources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,17 +19,17 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call or text C89.5 now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-o0-dgi">
-                                <rect key="frame" x="62" y="64" width="290" height="63"/>
+                                <rect key="frame" x="243" y="64" width="538" height="63"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTc-TO-faI">
-                                <rect key="frame" x="67" y="319.66666666666669" width="280" height="97"/>
+                                <rect key="frame" x="252" y="634.5" width="520" height="97"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="(206) 421-8989"/>
                                 <userDefinedRuntimeAttributes>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Si5-1b-Fg6">
-                                <rect key="frame" x="10" y="535" width="393" height="144"/>
+                                <rect key="frame" x="25.5" y="1165" width="973" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="uaW-qB-QTA"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-Vo-6eV">
-                                <rect key="frame" x="30.333333333333343" y="478" width="353.33333333333326" height="49"/>
+                                <rect key="frame" x="342.5" y="1108" width="339" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Tap here to give feedback"/>
                                 <userDefinedRuntimeAttributes>
@@ -66,28 +66,47 @@
                                     <action selector="feedbackButtonPressedWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="JEB-TT-QlI"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notification Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="O27-P4-0wG">
+                                <rect key="frame" x="675.5" y="1108" width="20" height="20"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayl-JU-0br">
+                                <rect key="frame" x="683.5" y="1112.5" width="5" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vTc-TO-faI" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.380435" id="6x0-mL-wVv"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="AbC-j6-iwz"/>
                             <constraint firstItem="vTc-TO-faI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Fpo-cf-6F2"/>
+                            <constraint firstItem="O27-P4-0wG" firstAttribute="trailing" secondItem="cN2-Vo-6eV" secondAttribute="trailing" constant="14" id="Gqa-Px-mEM"/>
+                            <constraint firstItem="Ayl-JU-0br" firstAttribute="centerY" secondItem="O27-P4-0wG" secondAttribute="centerY" id="IbP-OI-Yuy"/>
                             <constraint firstItem="cN2-Vo-6eV" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="NAT-VH-yhp"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="145:368" id="OtI-P7-Gm2"/>
+                            <constraint firstItem="Si5-1b-Fg6" firstAttribute="top" secondItem="cN2-Vo-6eV" secondAttribute="bottom" constant="8" id="RtC-Sk-wGe"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="centerX" secondItem="cN2-Vo-6eV" secondAttribute="centerX" id="SDG-u9-Auz"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.95" id="UkF-O8-EoY"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Si5-1b-Fg6" secondAttribute="bottom" constant="8" symbolic="YES" id="Xx8-BA-jUQ"/>
-                            <constraint firstItem="cN2-Vo-6eV" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="0.480435" id="a1Z-dl-ZUY"/>
+                            <constraint firstItem="cN2-Vo-6eV" firstAttribute="width" relation="lessThanOrEqual" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.8" id="ZAg-21-wTD"/>
+                            <constraint firstItem="Ayl-JU-0br" firstAttribute="centerX" secondItem="O27-P4-0wG" secondAttribute="centerX" id="bsT-El-lbl"/>
+                            <constraint firstItem="O27-P4-0wG" firstAttribute="top" secondItem="cN2-Vo-6eV" secondAttribute="top" id="maY-ge-d1K"/>
                             <constraint firstItem="Si5-1b-Fg6" firstAttribute="top" secondItem="cN2-Vo-6eV" secondAttribute="bottom" constant="8" id="pwU-Bs-3Yf"/>
                             <constraint firstItem="vTc-TO-faI" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="sMS-KT-bXl"/>
                             <constraint firstItem="dEE-o0-dgi" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="u8x-A1-Yru"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="LHg-1b-bf8"/>
+                    <connections>
+                        <outlet property="messageCenterButton" destination="cN2-Vo-6eV" id="44b-0S-RBt"/>
+                        <outlet property="notificationBadgeImage" destination="O27-P4-0wG" id="eM0-rA-44M"/>
+                        <outlet property="notificationBadgeNumber" destination="Ayl-JU-0br" id="imb-gr-Syz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651.875" y="357.04225352112678"/>
+            <point key="canvasLocation" x="1650.7246376811595" y="355.43478260869568"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -117,26 +136,26 @@
                         <viewControllerLayoutGuide type="bottom" id="p6M-np-cTl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bnY-Yc-4KJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-6g-Qt3">
-                                <rect key="frame" x="0.0" y="105.66666666666669" width="414" height="519"/>
+                                <rect key="frame" x="0.0" y="105.5" width="1024" height="1092"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name not available" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-mI-vU0">
-                                        <rect key="frame" x="41.333333333333343" y="0.0" width="331.33333333333326" height="75.666666666666671"/>
+                                        <rect key="frame" x="102" y="0.0" width="820" height="75"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C89.5 Logo With Slogan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-A5-IfG">
-                                        <rect key="frame" x="73" y="125.66666666666666" width="268" height="268.33333333333337"/>
+                                        <rect key="frame" x="256" y="290" width="512" height="512"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IS4-A5-IfG" secondAttribute="height" multiplier="1:1" id="eR0-iY-dBG"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-AW-DDL">
-                                        <rect key="frame" x="169.66666666666666" y="443.99999999999994" width="75" height="75.000000000000057"/>
+                                        <rect key="frame" x="474.5" y="1017" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="5e1-nu-5kt"/>
                                             <constraint firstAttribute="height" constant="75" id="EuN-Di-t0O"/>
@@ -206,6 +225,7 @@
     </scenes>
     <resources>
         <image name="C89.5 Logo With Slogan.jpg" width="512" height="512"/>
+        <image name="Notification Icon.png" width="20" height="20"/>
         <image name="Play Button.png" width="2011" height="2049"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
